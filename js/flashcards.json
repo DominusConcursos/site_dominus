@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "Qual a única forma de perda de <span class='cloze'>cargo vitalício</span>?<br>Quais são esses cargos citados pela CF?",
+    "resposta": "> É o cargo público que só pode ser destituído por <strong>sentença judicial transitada em julgado</strong>.<br><br>Na Constituição de 1988, são vitalícios os cargos:<ul><li><span class='cloze'>Membros da Magistratura</span></li><li><span class='cloze'>Tribunal de Contas</span></li><li><span class='cloze'>Ministério Público</span></li></ul>"
+  },
+  {
+    "pergunta": "Diferencia a <span class='cloze'>Calúnia</span> da <span class='cloze'>Denunciação Caluniosa</span>.",
+    "resposta": "> Na calúnia (crime contra a honra de ação penal privada, em regra) a vítima é a pessoa caluniada e a imputação falsa é somente de crime;<br><br>> Na denunciação caluniosa o autor move o estado (dar causa a uma investigação). Também engloba a contravenção penal, infração ético-disciplinar ou ato ímprobo."
+  },
+  {
+    "pergunta": "<strong>Inquérito Policial</strong><br><br>Quando a autoridade policial pode proceder a novas investigações?",
+    "resposta": "> Se tiver notícia de <span class='cloze'>novos elementos de informação</span>."
+  },
+  {
+    "pergunta": "<strong>Nacionalidade, Direitos Políticos e Partidos Políticos</strong><br><br>O estrangeiro pode ser candidato a cargo eletivo no Brasil?",
+    "resposta": "> Pode, no caso do português com <span class='cloze'>residência permanente</span> no País, se houver <span class='cloze'>reciprocidade</span> em favor de brasileiros, serão atribuídos os direitos inerentes ao brasileiro."
+  },
+  {
+    "pergunta": "Quem tem legitimidade para oferecer acusação à <span class='cloze'>Câmara dos Deputados</span> visando instauração de processo de <span class='cloze'>impeachment</span> do presidente?",
+    "resposta": "> Art. 14, Lei 1.079/50, a denúncia, por <span class='cloze'>crime de responsabilidade</span>, poderá ser feita junto à Câmara por <span class='cloze'>qualquer cidadão</span>. Ou seja, pessoa física em pleno gozo dos direitos políticos."
+  }
+]

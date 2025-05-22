@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dominus Concursos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --ouro: #c7a84f;
+      --bronze: #8c6239;
+      --grafite: #1a1a1a;
+      --pergaminho: #f5e6c5;
+      --vermelho-nobre: #801c1c;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--grafite);
+      color: var(--pergaminho);
+      line-height: 1.6;
+    }
+
+    nav {
+      background: var(--vermelho-nobre);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 40px;
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--pergaminho);
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #111;
+      padding: 80px 20px;
+      text-align: center;
+      color: var(--ouro);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 8px black;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: var(--ouro);
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--bronze);
+      margin-bottom: 20px;
+      padding-bottom: 6px;
+    }
+
+    .catalogo-wrapper {
+      position: relative;
+    }
+
+    .catalogo {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 20px 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .catalogo::-webkit-scrollbar { display: none; }
+
+    .card {
+      flex: 0 0 260px;
+      height: 360px;
+      background: var(--pergaminho);
+      color: var(--grafite);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card-content {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .preco {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .preco del {
+      color: #999;
+      margin-right: 6px;
+    }
+
+    .botao-comprar {
+      background: var(--grafite);
+      color: white;
+      padding: 8px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .botoes-navegacao {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .botoes-navegacao button {
+      background: var(--ouro);
+      border: none;
+      padding: 8px 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .card-box {
+      background: var(--pergaminho);
+      color: var(--grafite);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+
+    .faq {
+      background: #2a2a2a;
+      padding: 40px;
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+
+    .faq h2 {
+      color: var(--ouro);
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a href="#anki"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Anki_Logo.svg" alt="Anki" width="20"> Anki</a>
+    </div>
+    <div class="nav-right">
+      <a href="#home">Home</a>
+      <a href="#loja">Loja</a>
+      <a href="https://wa.me/5511999990000" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20"> WhatsApp</a>
+    </div>
+  </nav>
+
+  <header id="home">
+    <h1>DOMINUS CONCURSOS</h1>
+    <p>Conhecimento tático, constância e alta performance</p>
+  </header>
+
+  <section id="loja">
+    <h2>Pacotes em Destaque</h2>
+    <div class="botoes-navegacao">
+      <button onclick="rolarCatalogo('linha1', -1)">&#8592; Anterior</button>
+      <button onclick="rolarCatalogo('linha1', 1)">Próximo &#8594;</button>
+    </div>
+    <div class="catalogo-wrapper">
+      <div class="catalogo" id="linha1">
+        <div class="card"><div class="card-content"><div class="card-title">STM – Policial Judicial</div><div class="preco"><del>R$ 297,00</del> <strong>R$ 247,00</strong></div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">Polícia Federal – Delegado</div><div class="preco"><del>R$ 347,00</del> <strong>R$ 297,00</strong></div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">PCES – Investigador</div><div class="preco"><del>R$ 297,00</del> <strong>R$ 247,00</strong></div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">MPU – Policial Institucional</div><div class="preco"><del>R$ 297,00</del> <strong>R$ 247,00</strong></div><button class="botao-comprar">Comprar</button></div></div>
+      </div>
+    </div>
+
+    <h2>Manuais</h2>
+    <div class="botoes-navegacao">
+      <button onclick="rolarCatalogo('linha2', -1)">&#8592; Anterior</button>
+      <button onclick="rolarCatalogo('linha2', 1)">Próximo &#8594;</button>
+    </div>
+    <div class="catalogo-wrapper">
+      <div class="catalogo" id="linha2">
+        <div class="card"><div class="card-content"><div class="card-title">Manual para o Anki</div><div class="preco">Gratuito</div><button class="botao-comprar">Acessar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">Manual Completo - PLF</div><div class="preco"><del>R$ 197,00</del> <strong>R$ 147,00</strong></div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">Manual Completo - PF</div><div class="preco"><del>R$ 197,00</del> <strong>R$ 147,00</strong></div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">Manual - Saúde Mental</div><div class="preco"><del>R$ 97,00</del> <strong>R$ 67,00</strong></div><button class="botao-comprar">Comprar</button></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="materias">
+    <h2>Matérias Avulsas</h2>
+    <div class="botoes-navegacao">
+      <button onclick="rolarCatalogo('linha3', -1)">&#8592; Anterior</button>
+      <button onclick="rolarCatalogo('linha3', 1)">Próximo &#8594;</button>
+    </div>
+    <div class="catalogo-wrapper">
+      <div class="catalogo" id="linha3">
+        <div class="card"><div class="card-content"><div class="card-title">Direito Administrativo</div><div class="preco">R$ 67,00</div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">Direito Constitucional</div><div class="preco">R$ 67,00</div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">Direito Penal</div><div class="preco">R$ 67,00</div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">Raciocínio Lógico e Matemático</div><div class="preco">R$ 67,00</div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">Estatística</div><div class="preco">R$ 67,00</div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">Contabilidade Geral</div><div class="preco">R$ 67,00</div><button class="botao-comprar">Comprar</button></div></div>
+        <div class="card"><div class="card-content"><div class="card-title">Língua Portuguesa</div><div class="preco">R$ 67,00</div><button class="botao-comprar">Comprar</button></div></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function rolarCatalogo(id, direcao) {
+      const container = document.getElementById(id);
+      const scrollAmount = 300;
+      container.scrollBy({ left: scrollAmount * direcao, behavior: 'smooth' });
+    }
+  </script>
+  <section id="anki">
+    <h2>O que é o Anki?</h2>
+    <p>Anki é uma ferramenta de memorização baseada em repetição espaçada. Ideal para concurseiros que precisam fixar conteúdo com eficiência.</p>
+    <p>Você poderá integrar seus flashcards, criar revisões diárias personalizadas e aumentar drasticamente sua retenção.</p>
+
+    <h2>Exemplo de Flashcard</h2>
+    <div class="card-box">
+      <div class="question"><strong>Pergunta:</strong> Qual é o fundamento constitucional da Lei n. 10.446/2002?</div>
+      <hr>
+      <div class="answer"><strong>Resposta:</strong> Inciso I do §1º do art. 144 da Constituição Federal.</div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Dúvidas Frequentes (FAQ)</h2>
+    <div class="faq-item">
+      <strong>Como receberei meus flashcards?</strong>
+      Você receberá um link por e-mail com acesso imediato ao conteúdo em PDF e também versão para Anki.
+    </div>
+    <div class="faq-item">
+      <strong>Posso pagar no pix?</strong>
+      Sim! Aceitamos Pix e outros métodos como cartão de crédito e boleto.
+    </div>
+    <div class="faq-item">
+      <strong>Posso comprar as matérias avulsas?</strong>
+      Sim! Disponibilizamos pacotes avulsos das principais matérias diretamente na seção "Matérias Avulsas".
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dominus Concursos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- NAV FIXA NO TOPO -->
+  <nav class="topbar" id="home">
+    <div class="topbar-container">
+      <div class="logo-area">
+        <!-- (opcional) logotipo -->
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="flashcards.html">Loja</a>
+        <a href="https://wa.me/5511999990000" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="18" style="vertical-align: middle;">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TITULO INICIAL -->
+  <header>
+    <h1>Dominus Concursos</h1>
+    <p>Estude com estratégia. Flashcards que fixam.</p>
+  </header>
+  <section class="hero-banner" style="background: url('static/img/7e324c45-9b20-4bbf-b2ab-91eed1c1d209.png') center center / cover no-repeat; padding: 100px 20px; text-align: center; color: #f5f5f5;">
+    <div class="container">
+      <h2 style="font-size: 2.5rem; color: #c7a84f; margin-bottom: 20px;">Domine seu aprendizado para concursos</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 30px;">Aprenda de forma eficiente e estratégica com nossa plataforma de flashcards baseada em técnicas de memorização eficazes.</p>
+      <a href="flashcards.html" class="btn" style="background: #801c1c; color: #fff; padding: 12px 25px; border-radius: 5px; font-weight: 500;">Começar a estudar</a>
+    </div>
+  </section>
+
+  <!-- EXPLICAÇÃO DO ANKI -->
+  <section class="section metodo-dominus reveal" id="Anki">
+    <h2>Por que usar o método Dominus + Anki?</h2>
+    <p>
+      Nosso sistema combina <strong>memória ativa</strong> e <strong>revisão espaçada</strong> — as duas técnicas comprovadas mais eficazes para retenção de conteúdo.  
+      O Anki potencializa isso com alertas inteligentes de revisão no momento exato em que seu cérebro começa a esquecer.
+    </p>
+    <div class="metodo-cards">
+      <div class="metodo-card">
+        <i class="fas fa-brain"></i>
+        <h3>Memória Ativa</h3>
+        <p>
+          Testamos seu conhecimento de forma ativa, usando a técnica de "lacunas" (cloze deletion), comprovadamente mais eficaz para memorização de longo prazo.
+        </p>
+      </div>
+      <div class="metodo-card">
+        <i class="fas fa-clock"></i>
+        <h3>Revisão Espaçada</h3>
+        <p>
+          Algoritmo inteligente que programa revisões no momento ideal, evitando esquecimento e reduzindo o tempo total de estudo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2>Teste agora nossos flashcards!</h2>
+    <p>
+      - Exemplos de <strong>cards reais</strong> que estão em nossos pacotes<br>
+      - Conteúdo de qualidade<br>
+      - Método de <i>Cognitive Mapping</i> para destacar conceitos fundamentais<br>
+      - <i>Design</i> fluido com animações para diminuir a monotonia e manter o foco e a atenção<br>
+      - Tudo pensado para facilitar o aprendizado e a memorização de nossos conteúdos
+    </p>
+  </section>
+
+  <!-- CARD INTERATIVO -->
+  <section class="card-layout-section reveal">
+    <div class="card-layout">
+
+      <!-- CARD À ESQUERDA -->
+      <div class="card-container">
+
+        <div id="card-area">
+          <!-- O card será gerado dinamicamente aqui pelo scripts.js -->
+        </div>
+        
+        <!-- BOTOES PROXIMO CARD -->
+        <div class="card-controls">
+          <button class="btn-rating btn-facil">Fácil</button>
+          <button class="btn-rating btn-medio">Médio</button>
+          <button class="btn-rating btn-dificil">Difícil</button>
+        </div>
+
+      </div>
+    
+      <!-- IMAGEM À DIREITA -->
+      <div class="card-image">
+        <img src="static/img/segurando_card.png" alt="Ilustração" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VITRINE -->
+  <section class="section reveal">
+    <h2>Pacotes em Destaque</h2>
+    <div class="scroll-wrapper" data-scroll>
+      <button class="scroll-btn scroll-left">&#8592;</button>
+        <div class="scroll-row">
+          <div class="product-card"><h3>PLF</h3><div class="subtitle">Agente</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+          <div class="product-card"><h3>PRF</h3><div class="subtitle">Escrivão</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+          <div class="product-card"><h3>Polícia Militar</h3><div class="subtitle">Soldado</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+          <div class="product-card"><h3>Polícia Federal</h3><div class="subtitle">Agente</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+          <div class="product-card"><h3>Polícia Federal</h3><div class="subtitle">Escrivão</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+          <div class="product-card"><h3>Polícia Civil</h3><div class="subtitle">Investigador</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+        </div>
+        <button class="scroll-btn scroll-right">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-below-vitrine reveal">
+    <a href="flashcards.html" class="cta-button pulsing">
+      QUERO VER TODOS PACOTES
+    </a>
+  </div>
+
+  <!-- VITRINE MANUAIS -->
+  <section class="section reveal">
+    <h2>Manuais</h2>
+    <div class="scroll-wrapper" data-scroll>
+      <button class="scroll-btn scroll-left">&#8592;</button>
+      <div class="scroll-row">
+          <div class="product-card"><h3>Manual</h3><div class="subtitle">PLF</div><div class="price">R$49,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+          <div class="product-card"><h3>Manual</h3><div class="subtitle">ANKI</div><div class="price">R$49,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+          <div class="product-card"><h3>Manual</h3><div class="subtitle">Estudo Equilibrado</div><div class="price">R$49,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+        </div>
+      <button class="scroll-btn scroll-right">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <h2>Perguntas Frequentes</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">Como receberei meus flashcards?</button>
+      <div class="faq-answer">Você receberá um link para download em seu e-mail logo após a compra.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Posso pagar no pix?</button>
+      <div class="faq-answer">Sim! Aceitamos pagamento por Pix e outras formas como cartão de crédito e boleto.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Posso comprar matérias avulsas?</button>
+      <div class="faq-answer">Sim, temos pacotes separados por disciplina. Consulte na seção de produtos.</div>
+    </div>
+
+  </section>
+
+  <!-- RODAPÉ COM LINKS -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Dominus Concursos</h3>
+        <p>Preparando candidatos para aprovação em concursos públicos com métodos científicos de estudo e memorização.</p>
+        <div class="social-icons">
+          <a href="https://instagram.com/dominus.concursos" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/dominusconcursos" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://facebook.com/dominusconcursos" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="#home">Topo</a></li>
+          <li><a href="#flashcards">Flashcards</a></li>
+          <li><a href="#Anki">Anki</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contato</h3>
+        <p><i class="fas fa-envelope"></i>  concursosdominus@gmail.com</p>
+        <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Dominus Concursos – Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
