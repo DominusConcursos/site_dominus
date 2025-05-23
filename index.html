@@ -28,38 +28,41 @@
   </nav>
 
   <!-- TITULO INICIAL -->
-  <header>
+  <header class="top-header">
+    <img src="static/img/logo_semfundo.png" alt="Logo Dominus" class="logo" />
     <h1>Dominus Concursos</h1>
     <p>Estude com estratégia. Flashcards que fixam.</p>
   </header>
-  <section class="hero-banner" style="background: url('static/img/7e324c45-9b20-4bbf-b2ab-91eed1c1d209.png') center center / cover no-repeat; padding: 100px 20px; text-align: center; color: #f5f5f5;">
-    <div class="container">
-      <h2 style="font-size: 2.5rem; color: #c7a84f; margin-bottom: 20px;">Domine seu aprendizado para concursos</h2>
-      <p style="font-size: 1.2rem; margin-bottom: 30px;">Aprenda de forma eficiente e estratégica com nossa plataforma de flashcards baseada em técnicas de memorização eficazes.</p>
-      <a href="flashcards.html" class="btn" style="background: #801c1c; color: #fff; padding: 12px 25px; border-radius: 5px; font-weight: 500;">Começar a estudar</a>
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h1>Domine seu aprendizado para concursos</h1>
+      <p>Aprenda de forma eficiente e estratégica com nossa plataforma de flashcards baseada em técnicas de memorização eficazes.</p>
+      <a href="#vitrine1" class="hero-btn">Quero começar agora</a>
     </div>
   </section>
 
   <!-- EXPLICAÇÃO DO ANKI -->
   <section class="section metodo-dominus reveal" id="Anki">
-    <h2>Por que usar o método Dominus + Anki?</h2>
+    <h2>Por que usar flashcards do Anki?</h2>
     <p>
-      Nosso sistema combina <strong>memória ativa</strong> e <strong>revisão espaçada</strong> — as duas técnicas comprovadas mais eficazes para retenção de conteúdo.  
-      O Anki potencializa isso com alertas inteligentes de revisão no momento exato em que seu cérebro começa a esquecer.
+      O sistema une o que há de mais eficiente na ciência da aprendizagem:<br> 
+      <strong>memória ativa + revisão espaçada</strong><br>
+      Enquanto você estuda, o Anki cuida do resto — programando automaticamente os momentos ideais para revisar cada conteúdo, antes que você comece a esquecer.
     </p>
     <div class="metodo-cards">
       <div class="metodo-card">
         <i class="fas fa-brain"></i>
         <h3>Memória Ativa</h3>
         <p>
-          Testamos seu conhecimento de forma ativa, usando a técnica de "lacunas" (cloze deletion), comprovadamente mais eficaz para memorização de longo prazo.
+          Você será estimulado com perguntas do tipo “preencher lacunas”, que forçam o cérebro a buscar respostas ativamente — o método mais eficaz para aprender e reter a longo prazo.
         </p>
       </div>
       <div class="metodo-card">
         <i class="fas fa-clock"></i>
         <h3>Revisão Espaçada</h3>
         <p>
-          Algoritmo inteligente que programa revisões no momento ideal, evitando esquecimento e reduzindo o tempo total de estudo.
+          A tecnologia do Anki calcula o momento certo para revisar cada flashcard com base no seu desempenho.
+          Isso reduz drasticamente o esquecimento e encurta o tempo total de estudo.
         </p>
       </div>
     </div>
@@ -72,7 +75,7 @@
       - Conteúdo de qualidade<br>
       - Método de <i>Cognitive Mapping</i> para destacar conceitos fundamentais<br>
       - <i>Design</i> fluido com animações para diminuir a monotonia e manter o foco e a atenção<br>
-      - Tudo pensado para facilitar o aprendizado e a memorização de nossos conteúdos
+      - Tudo pensado para facilitar o <strong>aprendizado</strong> e a <strong>memorização</strong> de nossos conteúdos
     </p>
   </section>
 
@@ -98,24 +101,42 @@
     
       <!-- IMAGEM À DIREITA -->
       <div class="card-image">
-        <img src="static/img/segurando_card.png" alt="Ilustração" />
+        <img src="static/img/segurando_card.png" alt="Ilustração">
       </div>
 
     </div>
   </section>
 
   <!-- VITRINE -->
-  <section class="section reveal">
+  <section class="section reveal" id="vitrine1">
     <h2>Pacotes em Destaque</h2>
     <div class="scroll-wrapper" data-scroll>
       <button class="scroll-btn scroll-left">&#8592;</button>
         <div class="scroll-row">
-          <div class="product-card"><h3>PLF</h3><div class="subtitle">Agente</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
-          <div class="product-card"><h3>PRF</h3><div class="subtitle">Escrivão</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
-          <div class="product-card"><h3>Polícia Militar</h3><div class="subtitle">Soldado</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
-          <div class="product-card"><h3>Polícia Federal</h3><div class="subtitle">Agente</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
-          <div class="product-card"><h3>Polícia Federal</h3><div class="subtitle">Escrivão</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
-          <div class="product-card"><h3>Polícia Civil</h3><div class="subtitle">Investigador</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+          <div class="product-card"><div class="top prod-top-flashcards"><img src="static/img/logo_semfundo.png" alt="Logo" class="card-logo"><span class="title">Flashcards</span></div>
+            <h3>Polícia Federal</h3><div class="subtitle">Agente</div><div class="price">R$149,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button>
+            <ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul>
+          </div>
+          <div class="product-card"><div class="top prod-top-flashcards"><img src="static/img/logo_semfundo.png" alt="Logo" class="card-logo"><span class="title">Flashcards</span></div>
+            <h3>Polícia Federal</h3><div class="subtitle">Escrivão</div><div class="price">EM BREVE</div><div class="tag">Quero ser notificado!</div><button class="buy-btn buy-btn-embreve">Notificar</button>
+            <!-- ADD OS FEATURES QUANDO SAIR -->
+          </div>
+          <div class="product-card"><div class="top prod-top-flashcards"><img src="static/img/logo_semfundo.png" alt="Logo" class="card-logo"><span class="title">Flashcards</span></div>
+            <h3>Polícia Federal</h3><div class="subtitle">Escrivão</div><div class="price">EM BREVE</div><div class="tag">Quero ser notificado!</div><button class="buy-btn buy-btn-embreve">Notificar</button>
+            <!-- ADD OS FEATURES QUANDO SAIR -->
+          </div>
+          <div class="product-card"><div class="top prod-top-flashcards"><img src="static/img/logo_semfundo.png" alt="Logo" class="card-logo"><span class="title">Flashcards</span></div>
+            <h3>Polícia Legistaliva Federal</h3><div class="subtitle">Escrivão</div><div class="price">EM BREVE</div><div class="tag">Quero ser notificado!</div><button class="buy-btn buy-btn-embreve">Notificar</button>
+            <!-- ADD OS FEATURES QUANDO SAIR -->
+          </div>
+          <div class="product-card"><div class="top prod-top-flashcards"><img src="static/img/logo_semfundo.png" alt="Logo" class="card-logo"><span class="title">Flashcards</span></div>
+            <h3>Polícia Rodoviária Federal</h3><div class="subtitle">Escrivão</div><div class="price">EM BREVE</div><div class="tag">Quero ser notificado!</div><button class="buy-btn buy-btn-embreve">Notificar</button>
+            <!-- ADD OS FEATURES QUANDO SAIR -->
+          </div>
+          <div class="product-card"><div class="top prod-top-flashcards"><img src="static/img/logo_semfundo.png" alt="Logo" class="card-logo"><span class="title">Flashcards</span></div>
+            <h3>Polícia Militar - PMPR</h3><div class="subtitle">Soldado</div><div class="price">EM BREVE</div><div class="tag">Quero ser notificado!</div><button class="buy-btn buy-btn-embreve">Notificar</button>
+            <!-- ADD OS FEATURES QUANDO SAIR -->
+          </div>
         </div>
         <button class="scroll-btn scroll-right">&#8594;</button>
     </div>
@@ -133,10 +154,19 @@
     <h2>Manuais</h2>
     <div class="scroll-wrapper" data-scroll>
       <button class="scroll-btn scroll-left">&#8592;</button>
-      <div class="scroll-row">
-          <div class="product-card"><h3>Manual</h3><div class="subtitle">PLF</div><div class="price">R$49,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
-          <div class="product-card"><h3>Manual</h3><div class="subtitle">ANKI</div><div class="price">R$49,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
-          <div class="product-card"><h3>Manual</h3><div class="subtitle">Estudo Equilibrado</div><div class="price">R$49,00</div><div class="tag">Pré-Edital</div><button class="buy-btn">Comprar</button><ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul></div>
+        <div class="scroll-row">
+          <div class="product-card"><div class="top prod-top-manuais"><img src="static/img/logo_semfundo.png" alt="Logo" class="card-logo"><span class="title">Manuais</span></div>
+            <h3>Polícial Legistativo Federal</h3><div class="subtitle">TUDO SOBRE O CARGO DE PLF</div><div class="price">R$39,00</div><div class="tag"> </div><button class="buy-btn">Comprar</button>
+            <!-- ATUALIZAR FEATURES <ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul>-->
+          </div>
+          <div class="product-card"><div class="top prod-top-manuais"><img src="static/img/logo_semfundo.png" alt="Logo" class="card-logo"><span class="title">Manuais</span></div>
+            <h3>Anki</h3><div class="subtitle">TUDO SOBRE O ANKI</div><div class="price">EM BREVE</div><div class="tag"> </div><button class="buy-btn buy-btn-embreve">Notificar</button>
+            <!-- ATUALIZAR FEATURES <ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul>-->
+          </div>
+          <div class="product-card"><div class="top prod-top-manuais"><img src="static/img/logo_semfundo.png" alt="Logo" class="card-logo"><span class="title">Manuais</span></div>
+            <h3>Estudo Equilibrado</h3><div class="subtitle">MANTENHA O ALTO RENDIMENTO</div><div class="price">EM BREVE</div><div class="tag"> </div><button class="buy-btn buy-btn-embreve">Notificar</button>
+            <!-- ATUALIZAR FEATURES <ul class="features"><li><i class="fa fa-check-circle"></i> 7000+ Flashcards</li><li><i class="fa fa-check-circle"></i> Atualização pós-edital garantida</li></ul>-->
+          </div>
         </div>
       <button class="scroll-btn scroll-right">&#8594;</button>
     </div>
@@ -196,6 +226,9 @@
   </footer>
 
   <script src="js/scripts.js"></script>
+
+  <!-- STICKY CTA MOBILE -->
+  <a href="flashcards.html" class="sticky-cta-mobile hidden">GARANTA JÁ!</a>
 </body>
 
 </html>

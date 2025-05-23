@@ -1,49 +1,97 @@
 
 html {scroll-behavior: smooth;}
 :root {
-      --primary-color: #801c1c;
-      --accent-color: #c7a84f;
-      --dark-bg: #1a1a1a;
-      --dark-bg-light: #2c2c2c;
-      --text-color: #f5f5f5;
-      --text-secondary: #cccccc;
-      --border-color: #8c6239;
-      --card-bg: #ffffff;
-      --card-text: #111111;
-      --shadow: rgba(0, 0, 0, 0.2);
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: var(--dark-bg);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-    header {
-      background-color: var(--primary-color);
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px var(--shadow);
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    .section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      color: var(--accent-color);
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 10px;
-    }
+  --primary-color: #801c1c;
+  --accent-color: #c7a84f;
+  --dark-bg: #1a1a1a;
+  --dark-bg-light: #2c2c2c;
+  --text-color: #f5f5f5;
+  --text-secondary: #cccccc;
+  --border-color: #8c6239;
+  --card-bg: #ffffff;
+  --card-text: #111111;
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+.top-header {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {height: 80px; width: auto; margin-bottom: 12px;}
+.top-header h1 {
+  margin: 0;
+  color: var(--accent-color);
+}
+.top-header p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+h2 {
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+.hero-banner {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
+                url('../static/img/entrada_biblioteca_bandeira.png') center top no-repeat;
+  padding: 160px 20px 120px 20px;
+  text-align: center;
+  color: #fff;
+  padding-top: 180px;
+  background-position-y: 50%;
+  animation: slideUp 15s ease-in-out alternate infinite;
+}
+@keyframes slideUp {0% {background-position-y: 80%;}100% {background-position-y: 30%;}}
+.hero-banner h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #FFD54F;
+}
+.hero-banner p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #f0f0f0;
+  max-width: 860px;
+  margin: 0 auto 24px;
+}
+.hero-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.hero-btn:hover {
+  background-color: #a5302a;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  transform: scale(1.06);
+}
 .scroll-wrapper {
   position: relative;
   overflow: hidden;
   max-width: 1000px;
   margin: 0 auto 40px;
+  padding-bottom: 40px;
 }
 .scroll-row {
   display: flex;
@@ -55,7 +103,7 @@ html {scroll-behavior: smooth;}
 .scroll-row::-webkit-scrollbar {
   display: none;
 }
-    .scroll-btn {
+.scroll-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -67,95 +115,119 @@ html {scroll-behavior: smooth;}
       cursor: pointer;
       font-size: 18px;
       z-index: 10;
-    }
-    .scroll-left {
-      left: 10px;
-    }
-    .scroll-right {
-      right: 10px;
-    }
-    .product-card {
-      flex: 0 0 260px;
-      background: linear-gradient(to bottom, #f9f9f9, #f1f1f1);
-      color: var(--card-text);
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s;
-    }
-    .product-card:hover {
-      transform: scale(1.06);
-    }
-    .product-card h3 {
-      margin: 0 0 5px;
-      font-size: 1.4rem;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-    .product-card .subtitle {
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-      color: #555;
-    }
-    .product-card .price {
-      font-size: 1.6rem;
-      font-weight: bold;
-      margin: 10px 0;
-      color: #111;
-      border-top: 1px solid #ddd;
-      padding-top: 10px;
-    }
-    .product-card .tag {
-      font-size: 0.9rem;
-      color: #777;
-      margin-bottom: 20px;
-    }
-    .buy-btn {
-      background-color: #bd5530;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-weight: bold;
-      font-size: 1rem;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s;
-      margin-top: auto;
-    }
-    .buy-btn:hover {
-      background-color: #a49235;
-    }
-    .product-card .features {
+}
+.scroll-left {left: 10px;}
+.scroll-right {right: 10px;}
+.product-card {
+  flex: 0 0 260px;
+  background: linear-gradient(to bottom, #f9f9f9, #f1f1f1);
+  color: var(--card-text);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s;
+}
+.product-card:hover {transform: scale(1.06);}
+.product-card h3 {
+  margin: 0 0 5px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.product-card .top {
+  color: white;
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  vertical-align: middle;
+  gap: 0.5rem;
+  margin-bottom: 22px;
+}
+/* MUDA O TOPO DOS CARDS DE VITRINE */
+.prod-top-flashcards { background: linear-gradient(to bottom, var(--dark-bg) 10%, #3a3d95 80%); }
+.prod-top-manuais { background: linear-gradient(to bottom, var(--dark-bg) 10%, #3a9564 80%);}
+.prod-top-avulsas { background: linear-gradient(to bottom, var(--dark-bg) 10%, #a37a2c 80%);}
+.product-card .title {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.card-logo {
+  height: 25px;
+  overflow: visible;
+  width: auto;
+}
+.product-card .subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+.product-card .price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #111;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+.product-card .tag {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+.buy-btn {
+  background-color: #bd5530;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: auto;
+}
+.buy-btn:hover { background-color: #c13623; }
+.product-card .features {
       list-style: none;
       padding: 0;
       margin-top: 20px;
       color: #222;
-    }
-
-    .product-card .features li {
+}
+.buy-btn-embreve { background-color: #c48e3d;}
+.buy-btn-embreve:hover { background-color: #ba4030; }
+.product-card .features {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+      color: #222;
+}
+.product-card .features li {
       display: flex;
       align-items: center;
       gap: 8px;
       margin-bottom: 8px;
       font-size: 0.9rem;
-    }
+}
+.product-card .features i {
+  color: #a291fb;
+}
 
-    .product-card .features i {
-      color: #a291fb;
-    }
 .card-container {
-  width: 50%;
+  width: 100%;
   height: 70vh;
   margin-top: 20vh; /* empurra para começar exatamente onde termina o fundo preto */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 160px;
   box-sizing: border-box;
+  padding-left: 20px;
   z-index: 3;
 }
 #card-area {
@@ -434,6 +506,7 @@ html {scroll-behavior: smooth;}
       color: var(--text-secondary);
     }
 
+/* EFEITO REVEAL */
 .reveal {
   opacity: 0;
   transform: translateX(-50px);
@@ -448,12 +521,13 @@ html {scroll-behavior: smooth;}
 .cta-below-vitrine {
   text-align: center;
   margin: 40px auto 60px;
+  padding: 0 16px;
 }
 .cta-button {
-  background: linear-gradient(to right, var(--accent-color), var(--dark-bg));
+  background: linear-gradient(to bottom, var(--primary-color), var(--dark-bg));
   color: #fff;
-  padding: 18px 36px;
-  border-radius: 40px;
+  padding: 14px 24px;
+  border-radius: 11px;
   font-weight: bold;
   font-size: 1rem;
   text-decoration: none;
@@ -461,6 +535,9 @@ html {scroll-behavior: smooth;}
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   display: inline-block;
   border: none;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;  
 }
 .cta-button:hover {
   transform: scale(1.08);
@@ -520,7 +597,6 @@ html {scroll-behavior: smooth;}
 .hidden { display: none; }
 
 .cta-dominus {
-
   padding: 60px 20px;
   text-align: center;
   color: white;
@@ -571,7 +647,6 @@ html {scroll-behavior: smooth;}
   padding: 20px;
   color: #f5f5f5;
 }
-
 .faq-section h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
@@ -579,13 +654,11 @@ html {scroll-behavior: smooth;}
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 8px;
 }
-
 .faq-item {
   margin-bottom: 16px;
   border-bottom: 1px solid #444;
   padding-bottom: 12px;
 }
-
 .faq-question {
   background: none;
   border: none;
@@ -598,11 +671,7 @@ html {scroll-behavior: smooth;}
   padding: 10px 0;
   transition: color 0.2s ease;
 }
-
-.faq-question:hover {
-  color: var(--accent-color);
-}
-
+.faq-question:hover { color: var(--accent-color);}
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -611,7 +680,49 @@ html {scroll-behavior: smooth;}
   font-size: 0.95rem;
   line-height: 1.4;
 }
+.faq-item.active .faq-answer { max-height: 200px;}
 
-.faq-item.active .faq-answer {
-  max-height: 200px; /* ajustável se respostas forem maiores */
+/* mobile */
+@media (max-width: 768px) {
+  /* Rolagem touch */
+  .scroll-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+  }
+  .scroll-row::-webkit-scrollbar {display: none;}
+  .product-card {scroll-snap-align: start;}
+
+  /* STICKY CTA */
+  .sticky-cta-mobile {
+    position: fixed;
+    bottom: 20px;
+    left: 20%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #b32222, #801c1c);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+    white-space: nowrap;
+  }
+  @keyframes pulse { 
+    0% { transform: translateX(-50%) scale(1); } 
+    50% { transform: translateX(-50%) scale(1.05); }
+    100% { transform: translateX(-50%) scale(1); }
+  }
+
+  /* Desativa botao CTA e HOVER */
+  .cta-below-vitrine {display: none;}
+  .product-card:hover {transform: none !important;box-shadow: none !important;z-index: initial !important;}
+  .scroll-btn {display: none !important;}
 }

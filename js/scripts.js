@@ -72,7 +72,7 @@
             }
           });
         }, {
-          threshold: 0.5
+          threshold: 0.25
         });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
@@ -188,5 +188,13 @@
     });
   });
 
-
+  // Mostra sticky CTA depois de 400px
+  const stickyBtn = document.querySelector('.sticky-cta-mobile');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      stickyBtn.classList.remove('hidden');
+    } else {
+      stickyBtn.classList.add('hidden');
+    }
+  });
 });
