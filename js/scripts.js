@@ -78,13 +78,6 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     });
 
-    //Flip    
-    document.querySelectorAll('.card').forEach(card => {      
-      card.addEventListener('click', () => {        
-        card.classList.toggle('flip');      
-      });    
-    });
-
   let flashcards = [];
   let currentCardIndex = 0;
 
@@ -97,7 +90,6 @@
             <div class="question">${data.pergunta}</div>
           </div>
           <div class="card-content card-back">
-            <div class="question">${data.pergunta}</div>
             <div class="answer">${data.resposta}</div>
           </div>
         </div>
@@ -135,6 +127,7 @@
     // evento do botão reiniciar
     document.getElementById('restart-btn')?.addEventListener('click', () => {
       currentCardIndex = 0;
+      updateProgress(0, flashcards.length);
       renderCard(flashcards[0]);
       document.querySelector('.card-controls')?.classList.remove('hidden');
     });
@@ -157,6 +150,7 @@
       console.log('Nível marcado:', nivel); // Para uso futuro: salvar estatísticas, etc.
 
       currentCardIndex++;
+      updateProgress(currentCardIndex, flashcards.length);
 
       if (currentCardIndex >= flashcards.length) {
         showEndScreen(); // nova função que cria a tela final
@@ -180,10 +174,17 @@
     }
   });
 
-  // Clique FAQ
+  // Clique FAQ - abre uma e fecha as outras
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.parentElement;
+
+      // Fecha todos os outros
+      document.querySelectorAll('.faq-item').forEach(el => {
+        if (el !== item) el.classList.remove('active');
+      });
+
+      // Alterna o item clicado
       item.classList.toggle('active');
     });
   });
@@ -197,4 +198,11 @@
       stickyBtn.classList.add('hidden');
     }
   });
+
+  // Barra de progresso do card interativo
+  function updateProgress(currentIndex, total) {
+    const progress = Math.round((currentIndex / total) * 100);
+    document.querySelector('.card-progress-bar').style.width = `${progress}%`;
+  }
+
 });

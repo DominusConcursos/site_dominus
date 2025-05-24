@@ -33,6 +33,8 @@
     <h1>Dominus Concursos</h1>
     <p>Estude com estratégia. Flashcards que fixam.</p>
   </header>
+
+  <!-- HERO BANNER -->
   <section class="hero-banner">
     <div class="hero-content">
       <h1>Domine seu aprendizado para concursos</h1>
@@ -42,7 +44,7 @@
   </section>
 
   <!-- EXPLICAÇÃO DO ANKI -->
-  <section class="section metodo-dominus reveal" id="Anki">
+  <section class="section-title metodo-dominus reveal" id="Anki">
     <h2>Por que usar flashcards do Anki?</h2>
     <p>
       O sistema une o que há de mais eficiente na ciência da aprendizagem:<br> 
@@ -68,7 +70,8 @@
     </div>
   </section>
 
-  <section class="section reveal">
+  <!-- CARD INTERATIVO -->
+  <section class="section-title reveal">
     <h2>Teste agora nossos flashcards!</h2>
     <p>
       - Exemplos de <strong>cards reais</strong> que estão em nossos pacotes<br>
@@ -78,18 +81,20 @@
       - Tudo pensado para facilitar o <strong>aprendizado</strong> e a <strong>memorização</strong> de nossos conteúdos
     </p>
   </section>
-
-  <!-- CARD INTERATIVO -->
+  
   <section class="card-layout-section reveal">
     <div class="card-layout">
 
-      <!-- CARD À ESQUERDA -->
+      <!-- CARD -->
       <div class="card-container">
 
         <div id="card-area">
           <!-- O card será gerado dinamicamente aqui pelo scripts.js -->
         </div>
-        
+        <!-- BARRA DE PROGRESSO -->
+        <div class="card-progress-wrapper">
+          <div class="card-progress-bar" style="width: 0%;"></div>
+        </div>
         <!-- BOTOES PROXIMO CARD -->
         <div class="card-controls">
           <button class="btn-rating btn-facil">Fácil</button>
@@ -99,7 +104,7 @@
 
       </div>
     
-      <!-- IMAGEM À DIREITA -->
+      <!-- IMAGEM DE FUNDO -->
       <div class="card-image">
         <img src="static/img/segurando_card.png" alt="Ilustração">
       </div>
@@ -108,7 +113,7 @@
   </section>
 
   <!-- VITRINE -->
-  <section class="section reveal" id="vitrine1">
+  <section class="section-title reveal" id="vitrine1">
     <h2>Pacotes em Destaque</h2>
     <div class="scroll-wrapper" data-scroll>
       <button class="scroll-btn scroll-left">&#8592;</button>
@@ -150,7 +155,7 @@
   </div>
 
   <!-- VITRINE MANUAIS -->
-  <section class="section reveal">
+  <section class="section-title reveal">
     <h2>Manuais</h2>
     <div class="scroll-wrapper" data-scroll>
       <button class="scroll-btn scroll-left">&#8592;</button>
